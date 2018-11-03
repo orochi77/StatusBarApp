@@ -28,6 +28,8 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setSystemUIFragLightStatusBar();
+
         setContentView(R.layout.activity_main);
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
