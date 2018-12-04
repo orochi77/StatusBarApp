@@ -28,7 +28,9 @@
         <activity
             android:name=".view.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".view.RecyclerViewActivity" />
     </application>
 
 </manifest>

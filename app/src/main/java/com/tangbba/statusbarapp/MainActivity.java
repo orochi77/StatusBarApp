@@ -1,6 +1,7 @@
 package com.tangbba.statusbarapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import com.tangbba.statusbarapp.base.BaseActivity;
 import com.tangbba.statusbarapp.utils.ThemeUtils;
 import com.tangbba.statusbarapp.view.CameraActivity;
+import com.tangbba.statusbarapp.view.RecyclerViewActivity;
 import com.tangbba.statusbarapp.view.ScrollingActivity;
 
 public class MainActivity extends BaseActivity
@@ -121,7 +123,8 @@ public class MainActivity extends BaseActivity
                     });
             builder.show();
         } else if (id == R.id.nav_manage) {
-
+            Intent intent = RecyclerViewActivity.newIntent(MainActivity.this);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
