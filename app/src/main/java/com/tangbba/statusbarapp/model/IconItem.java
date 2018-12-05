@@ -34,6 +34,13 @@ public class IconItem implements Parcelable {
     }
 
     @Override
+    public String toString() {
+        return "IconItem{" +
+                "mIconName='" + mIconName + '\'' +
+                '}';
+    }
+
+    @Override
     public int describeContents() {
         return 0;
     }

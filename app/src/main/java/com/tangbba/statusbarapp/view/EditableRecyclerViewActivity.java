@@ -9,11 +9,13 @@ import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.Button;
 
 import com.tangbba.statusbarapp.R;
 import com.tangbba.statusbarapp.adapter.EditableIconItemRecyclerViewAdapter;
+import com.tangbba.statusbarapp.adapter.helper.ItemTouchHelperCallback;
 import com.tangbba.statusbarapp.base.BaseActivity;
 import com.tangbba.statusbarapp.model.IconItem;
 
@@ -23,8 +25,8 @@ import java.util.List;
 public class EditableRecyclerViewActivity extends BaseActivity {
 
     private static final String TAG = "EditableRecyclerViewActivity";
-    private static final String EXTRA_ICON_ITEMS = "iconItems";
-    private static final String EXTRA_MODIFY_ICON_ITEMS = "modifyIconItems";
+    public static final String EXTRA_ICON_ITEMS = "iconItems";
+    public static final String EXTRA_MODIFY_ICON_ITEMS = "modifyIconItems";
 
     public static Intent newIntent(Context context, List<IconItem> iconItems) {
         Intent intent = new Intent(context, EditableRecyclerViewActivity.class);
@@ -37,6 +39,8 @@ public class EditableRecyclerViewActivity extends BaseActivity {
     private GridLayoutManager mGridLayoutManager;
     private EditableIconItemRecyclerViewAdapter mAdapter;
     private List<IconItem> mIconItems;
+
+    private ItemTouchHelper mItemTouchHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,8 +62,13 @@ public class EditableRecyclerViewActivity extends BaseActivity {
     }
 
     private void setupRecyclerView(List<IconItem> dataProvider) {
+
         mAdapter = new EditableIconItemRecyclerViewAdapter(this, new ArrayList<IconItem>());
         mRecyclerView.setAdapter(mAdapter);
+
+        ItemTouchHelper.Callback itemTouchHelperCallback = new ItemTouchHelperCallback(mAdapter);
+        mItemTouchHelper = new ItemTouchHelper(itemTouchHelperCallback);
+        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         int spanCount = 4;
         mGridLayoutManager = new GridLayoutManager(this, spanCount);

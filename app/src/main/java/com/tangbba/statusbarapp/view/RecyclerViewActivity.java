@@ -18,6 +18,7 @@ import com.tangbba.statusbarapp.model.IconItem;
 import com.tangbba.statusbarapp.utils.IconItemGenerator;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewActivity extends BaseActivity {
 
@@ -57,7 +58,9 @@ public class RecyclerViewActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_ICON_ITEM_LIST) {
             if (resultCode == Activity.RESULT_OK) {
-
+                List<IconItem> iconItems = data.getParcelableArrayListExtra(EditableRecyclerViewActivity.EXTRA_MODIFY_ICON_ITEMS);
+                mHomeIcons.setIconItems(iconItems);
+                mAdapter.setDataProvider(mHomeIcons.getIconItems());
             }
         }
     }
