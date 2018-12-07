@@ -4,6 +4,7 @@ import android.graphics.Canvas;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 
 public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 

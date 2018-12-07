@@ -15,6 +15,7 @@ import android.widget.Button;
 
 import com.tangbba.statusbarapp.R;
 import com.tangbba.statusbarapp.adapter.EditableIconItemRecyclerViewAdapter;
+import com.tangbba.statusbarapp.adapter.IconItemDecoration;
 import com.tangbba.statusbarapp.adapter.helper.ItemTouchHelperCallback;
 import com.tangbba.statusbarapp.base.BaseActivity;
 import com.tangbba.statusbarapp.model.IconItem;
@@ -62,7 +63,7 @@ public class EditableRecyclerViewActivity extends BaseActivity {
     }
 
     private void setupRecyclerView(List<IconItem> dataProvider) {
-
+        mRecyclerView.addItemDecoration(new IconItemDecoration(this));
         mAdapter = new EditableIconItemRecyclerViewAdapter(this, new ArrayList<IconItem>());
         mRecyclerView.setAdapter(mAdapter);
 

@@ -69,7 +69,7 @@ public class IconItemRecyclerViewAdapter extends RecyclerView.Adapter<IconItemRe
                     Toast.makeText(mContext, mIconItem.getIconName(), Toast.LENGTH_SHORT).show();
                 }
             });
-            mItemRootView = itemView.findViewById(R.id.item_root_view);
+            mItemRootView = itemView.findViewById(R.id.item_container);
             mIconImageView = (ImageView) itemView.findViewById(R.id.icon_image_view);
             mIconNameTextView = (TextView) itemView.findViewById(R.id.icon_name_text_view);
         }

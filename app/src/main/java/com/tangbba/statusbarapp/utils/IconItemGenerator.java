@@ -10,21 +10,22 @@ public class IconItemGenerator {
     public static List<IconItem> getIconItems() {
         List<IconItem> iconItems = new ArrayList<>();
 
-        iconItems.add(new IconItem(R.drawable.twotone_account_balance_wallet_black_24, "지갑"));
-        iconItems.add(new IconItem(R.drawable.twotone_book_black_24, "책"));
-        iconItems.add(new IconItem(R.drawable.twotone_card_membership_black_24, "멤버쉽"));
-        iconItems.add(new IconItem(R.drawable.twotone_contacts_black_24, "연락처"));
-        iconItems.add(new IconItem(R.drawable.twotone_face_black_24, "프로필"));
-        iconItems.add(new IconItem(R.drawable.twotone_g_translate_black_24, "구글 번역"));
-        iconItems.add(new IconItem(R.drawable.twotone_label_black_24, "라벨"));
-        iconItems.add(new IconItem(R.drawable.twotone_lock_open_black_24, "잠금"));
-        iconItems.add(new IconItem(R.drawable.twotone_print_black_24, "프린터"));
-        iconItems.add(new IconItem(R.drawable.twotone_settings_applications_black_24, "설정"));
-        iconItems.add(new IconItem(R.drawable.twotone_shop_black_24, "쇼핑"));
-        iconItems.add(new IconItem(R.drawable.twotone_shopping_cart_black_24, "장바구니"));
-        iconItems.add(new IconItem(R.drawable.twotone_thumb_up_black_24, "좋아요"));
-        iconItems.add(new IconItem(R.drawable.twotone_today_black_24, "오늘의 일정"));
-        iconItems.add(new IconItem(R.drawable.twotone_touch_app_black_24, "터치"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_allience, "지갑"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_checkaccount, "책"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_credit, "멤버쉽"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_gift, "연락처"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_mealticket, "프로필"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_membership, "구글 번역"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_mileage, "라벨"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_mycoupon, "잠금"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_mywallet, "프린터"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_order, "설정"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_point, "쇼핑"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_qrcode, "장바구니"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_shopping, "좋아요"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_tailor, "오늘의 일정"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_tmoney, "터치"));
+        iconItems.add(new IconItem(R.drawable.m_44_menu_ic_transfer, "터치"));
 
         return iconItems;
     }

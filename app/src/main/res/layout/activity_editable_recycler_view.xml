@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/submit_button"
+        android:background="@android:color/white"
         tools:layoutManager="android.support.v7.widget.GridLayoutManager"
         tools:itemCount="120"
         tools:spanCount="4"
