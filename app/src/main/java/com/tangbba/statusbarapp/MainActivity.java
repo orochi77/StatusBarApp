@@ -1,8 +1,10 @@
 package com.tangbba.statusbarapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,8 +20,11 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.tangbba.statusbarapp.base.BaseActivity;
+import com.tangbba.statusbarapp.service.PaycoInitialService;
 import com.tangbba.statusbarapp.utils.ThemeUtils;
 import com.tangbba.statusbarapp.view.CameraActivity;
+import com.tangbba.statusbarapp.view.DownloadActivity;
+import com.tangbba.statusbarapp.view.RecyclerViewActivity;
 import com.tangbba.statusbarapp.view.ScrollingActivity;
 
 public class MainActivity extends BaseActivity
@@ -29,6 +34,10 @@ public class MainActivity extends BaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setSystemUIFragLightStatusBar();
+
+        StrictMode.ThreadPolicy policy = new
+                StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         setContentView(R.layout.activity_main);
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
@@ -121,9 +130,10 @@ public class MainActivity extends BaseActivity
                     });
             builder.show();
         } else if (id == R.id.nav_manage) {
-
+            Intent intent = RecyclerViewActivity.newIntent(MainActivity.this);
+            startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            startActivity(new Intent(MainActivity.this, DownloadActivity.class));
         } else if (id == R.id.nav_send) {
 
         }
