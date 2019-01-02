@@ -21,7 +21,7 @@ public class PaycoInitialService extends IntentService {
 
     public static final String EXTRA_COMMAND_TYPE = "commandType";
 
-    public static final String mImageUrl = "http://image.adidas.co.kr/upload/prod/basic/source/DH4796-1.jpg";
+    public static final String mImageUrl = "http://aos.appdev.payco.com/test/upload/upload_files/splash_06_img.png";
     public static final String mLaunchingUrl = "https://api-lnc.cloud.toast.com/launching/v2/application/fd6d8dd3a1eebeb79370a290747053812e0bf8a3bd668ea4030df071caadd780/launching";
 
     private static final String mDirectoryName = "splash";
