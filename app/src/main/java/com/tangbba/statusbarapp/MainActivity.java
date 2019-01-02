@@ -26,6 +26,7 @@ import com.tangbba.statusbarapp.view.CameraActivity;
 import com.tangbba.statusbarapp.view.DownloadActivity;
 import com.tangbba.statusbarapp.view.RecyclerViewActivity;
 import com.tangbba.statusbarapp.view.ScrollingActivity;
+import com.tangbba.statusbarapp.view.SendActivity;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -135,7 +136,7 @@ public class MainActivity extends BaseActivity
         } else if (id == R.id.nav_share) {
             startActivity(new Intent(MainActivity.this, DownloadActivity.class));
         } else if (id == R.id.nav_send) {
-
+            startActivity(SendActivity.newIntent(MainActivity.this));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
